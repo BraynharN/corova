@@ -24,32 +24,32 @@ public class korovovbiykliker : MonoBehaviour
 
     public void addNum()
     {
-        bebra.money+=magazin.;
+        bebra.money+=bebra.buster.sv;
         
     }
     public void bustBuy()
     {
-        if (magazin.money >= magazin.bustPrice)
+        if (bebra.money >= bebra.buster.price)
         {
-            magazin.BuyBuster();
+            bebra.BuyBuster();
 
             //textabs.text = magazin.money.ToString();
         }
     }
     public void PassBuy()
     {
-        if (magazin.money >= magazin.PassivePrice)
+        if (bebra.money >= bebra.Passive.price)
         {
-            magazin.BuyPassiv();
+            bebra.BuyPassiv();
            // textabs.text = magazin.money.ToString();
         }
         
         }
     public void TIMEBuy()
     {
-        if (magazin.money >= magazin.TimebustPrice)
+        if (bebra.money >= bebra.TimeBust.price)
         {
-            magazin.BuyTimeBust();
+            bebra.BuyTimeBust();
             // textabs.text = magazin.money.ToString();
         }
     }
@@ -62,23 +62,24 @@ public class korovovbiykliker : MonoBehaviour
     void Start()
     {
         debugcoomp = GameObject.Find("Main Camera").GetComponent<debug>();
-        StartCoroutine("Passive");
+        StartCoroutine("Passiver");
         panelmagaz = GameObject.Find("MAGAAAZ");
         panelmagaz.SetActive(!panelmagaz.activeSelf);
+        bebra = GameObject.Find("Main Camera").GetComponent<magazin>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        debugcoomp.bronse = Convert.ToInt32(magazin.money);
-        textabs.text = magazin.money.ToString();
-        textbustC.text = magazin.quantityBusters.ToString();
-        textbustK.text = magazin.bustPrice.ToString();
-        texttimeC.text = magazin.quantityTimebust.ToString();
-        texttimeK.text = magazin.TimebustPrice.ToString();
-        textpassiveC.text = magazin.quantityPassive.ToString();
-        textpassiveK.text = magazin.PassivePrice.ToString();
+        debugcoomp.bronse = Convert.ToInt32(bebra.money);
+        textabs.text = bebra.money.ToString();
+        textbustC.text = bebra.buster.amount.ToString();
+        textbustK.text = bebra.buster.price.ToString();
+        texttimeC.text = bebra.TimeBust.amount.ToString();
+        texttimeK.text = bebra.TimeBust.price.ToString();
+        textpassiveC.text = bebra.Passive.amount.ToString();
+        textpassiveK.text = bebra.Passive.price.ToString();
         bronceaaa.text = debugcoomp.bronse.ToString();
         silveraaa.text = debugcoomp.silver.ToString();
         goldaaa.text = debugcoomp.gold.ToString();
@@ -89,11 +90,11 @@ public class korovovbiykliker : MonoBehaviour
         
     }
 
-    IEnumerator Passive()
+    IEnumerator Passiver()
     {
-        magazin.money += magazin.passive;
-        yield return new WaitForSeconds(magazin.Timebust);
-        StartCoroutine("Passive");
+        bebra.money += bebra.Passive.sv;
+        yield return new WaitForSeconds(bebra.TimeBust.sv);
+        StartCoroutine("Passiver");
 
     }
     public void ConvPrice()

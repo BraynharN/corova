@@ -295,6 +295,7 @@ GameObject:
   - component: {fileID: 304890556}
   - component: {fileID: 304890555}
   - component: {fileID: 304890554}
+  - component: {fileID: 304890557}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -417,6 +418,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304890552}
   m_CullTransparentMesh: 1
+--- !u!114 &304890557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304890552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a711b96c2d19df459134c3e900301e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cena: {fileID: 2046695067}
+  Kolvo: {fileID: 25243756}
+  amount: 0
+  price: 200
+  sv: 1
 --- !u!1 &311276439
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,6 +527,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -594,6 +613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c2176963f6c8e94f8ab8e635c4eb792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aboba: {fileID: 0}
   bronse: 0
   silver: 0
   gold: 0
@@ -608,6 +628,22 @@ MonoBehaviour:
   PassPriceSilver: 0
   PassPriceGold: 0
   PassPricePlatinum: 0
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11892e1cd60a7a748b655704c9af8d88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 0
+  buster: {fileID: 304890557}
+  Passive: {fileID: 1584226123}
+  TimeBust: {fileID: 1627116635}
 --- !u!1 &608303497
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,6 +697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be3e988d66648e54fb5f2c26ded98f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bebra: {fileID: 0}
   textabs: {fileID: 1192434682}
   textbustC: {fileID: 2046695067}
   textbustK: {fileID: 25243756}
@@ -1615,7 +1652,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7207473, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.2799988, y: 0}
+  m_AnchoredPosition: {x: -1.2800293, y: 0}
   m_SizeDelta: {x: 2.5700073, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1179894743
@@ -1976,6 +2013,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1991,6 +2029,7 @@ GameObject:
   - component: {fileID: 1584226122}
   - component: {fileID: 1584226121}
   - component: {fileID: 1584226120}
+  - component: {fileID: 1584226123}
   m_Layer: 5
   m_Name: w
   m_TagString: Untagged
@@ -2113,6 +2152,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584226118}
   m_CullTransparentMesh: 1
+--- !u!114 &1584226123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584226118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a711b96c2d19df459134c3e900301e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cena: {fileID: 0}
+  Kolvo: {fileID: 0}
+  amount: 1
+  price: 1
+  sv: 1
 --- !u!1 &1597072129
 GameObject:
   m_ObjectHideFlags: 0
@@ -2211,6 +2267,7 @@ GameObject:
   - component: {fileID: 1627116634}
   - component: {fileID: 1627116633}
   - component: {fileID: 1627116632}
+  - component: {fileID: 1627116635}
   m_Layer: 5
   m_Name: timebust
   m_TagString: Untagged
@@ -2333,6 +2390,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627116630}
   m_CullTransparentMesh: 1
+--- !u!114 &1627116635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627116630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a711b96c2d19df459134c3e900301e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cena: {fileID: 0}
+  Kolvo: {fileID: 0}
+  amount: 1
+  price: 200
+  sv: 1000
 --- !u!1 &1774200472
 GameObject:
   m_ObjectHideFlags: 0
@@ -2443,7 +2517,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit

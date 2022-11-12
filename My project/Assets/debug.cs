@@ -9,20 +9,20 @@ public class debug : MonoBehaviour
 
     }
     public magazin aboba;
-    public int bronse = 0;
-    public int silver = 0;
-    public int gold = 0;
-    public int platinum = 0;
-    public int diamond = 0;
-    public int BustPriceSilver = 0;
-    public int BustPriceGold = 0;
-    public int BustPricePlatinum = 0;
-    public int TimePriceSilver = 0;
-    public int TimePriceGold = 0;
-    public int TimePricePlatinum = 0;
-    public int PassPriceSilver = 0;
-    public int PassPriceGold = 0;
-    public int PassPricePlatinum = 0;
+    public float bronse = 0;
+    public float silver = 0;
+    public float gold = 0;
+    public float platinum = 0;
+    public float diamond = 0;
+    public float BustPriceSilver = 0;
+    public float BustPriceGold = 0;
+    public float BustPricePlatinum = 0;
+    public float TimePriceSilver = 0;
+    public float TimePriceGold = 0;
+    public float TimePricePlatinum = 0;
+    public float PassPriceSilver = 0;
+    public float PassPriceGold = 0;
+    public float PassPricePlatinum = 0;
 
 
 
@@ -53,5 +53,8 @@ public class debug : MonoBehaviour
         }
     }
 
-    
+    private void Start()
+    {
+        aboba = GameObject.Find("Main Camera").GetComponent<magazin>();
+    }
 }

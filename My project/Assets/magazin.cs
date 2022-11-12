@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class magazin : MonoBehaviour
 {
-    public double money = 0;
+    public float money = 0;
     public knopka buster;
     public knopka Passive;
     public knopka TimeBust;
